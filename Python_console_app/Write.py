@@ -3,7 +3,8 @@ import time
 
 import serial
 
-WRITEFILE = 'write_2.bin'  # Filename
+WRITEFILE = 'write.bin'  # Filename
+COMPORT = 'COM3'  # Number of comport
 
 SendBlockLength = 2048  # The length of the data packet to write in bytes.
 Com_Baudrate = 1000000  # Port speed in baud.
@@ -110,7 +111,7 @@ if __name__ == "__main__":
         Flash_File.close()
         print('File is load.')
         try:
-            ser = serial.Serial('COM3', Com_Baudrate)
+            ser = serial.Serial(COMPORT, Com_Baudrate)
         except Exception:
             print('Can\'t open port.')
         else:
