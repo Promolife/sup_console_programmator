@@ -1,0 +1,17 @@
+"--cpu=m2560" 
+
+"--enhanced_core" 
+
+"--64bit_doubles" 
+
+"-p" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\avr\Config\iom2560.ddf" 
+
+"--eeprom_size" 
+
+"4096" 
+
+
+
+

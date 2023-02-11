@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1303478069</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\iom2560.h</file>
+            <file>$PROJ_DIR$\system.c</file>
+            <file>$TOOLKIT_DIR$\src\template\cfgm2560.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\bitdefinitions\iom2560.inc</file>
+            <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\all_logic.c</file>
+            <file>$PROJ_DIR$\Debug\List\SUP_Reader_Writer.map</file>
+            <file>$PROJ_DIR$\i2c_soft.c</file>
+            <file>$PROJ_DIR$\button.c</file>
+            <file>$PROJ_DIR$\timers.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\k5l.c</file>
+            <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+            <file>$PROJ_DIR$\SSD1306.c</file>
+            <file>$PROJ_DIR$\flash_operation.c</file>
+            <file>$TOOLKIT_DIR$\lib\clib\cl5s-ec_mul-64.r90</file>
+            <file>$PROJ_DIR$\parsing.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\SUP_Reader_Writer.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\font.c</file>
+            <file>$TOOLKIT_DIR$\src\template\cfg5soim.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.r90</file>
+            <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\SUP_Reader_Writer.hex</file>
+            <file>$PROJ_DIR$\usart.c</file>
+            <file>$PROJ_DIR$\led.c</file>
+            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+            <file>$PROJ_DIR$\SSD1306.h</file>
+            <file>$TOOLKIT_DIR$\inc\iomacro.h</file>
+            <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 24 7</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCAVR</name>
+                    <file> 22</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 11</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCAVR</name>
+                    <file> 0 29 3 30 13 4 27 23 1 26 9 25 10 8 14 28 20 12 15 17 6</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\SUP_Reader_Writer.hex</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 7</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 2 21 22 16</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
