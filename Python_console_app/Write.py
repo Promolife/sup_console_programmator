@@ -3,7 +3,7 @@ import time
 
 import serial
 
-WRITEFILE = 'write_2.bin'  # Filename
+WRITEFILE = 'write.bin'  # Filename
 
 SendBlockLength = 2048  # The length of the data packet to write in bytes.
 Com_Baudrate = 1000000  # Port speed in baud.
