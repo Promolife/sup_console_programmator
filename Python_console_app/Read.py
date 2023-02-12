@@ -6,13 +6,14 @@ import serial
 READFILE = 'dump.bin'  # Filename.
 COMPORT = 'COM3'  # Number of comport.
 
-COM_BAUDRATE = 115200  # Port speed in baud.
+COM_BAUDRATE = 1000000  # Port speed in baud.
 FLASH_ADDRESS_BEGIN = 0x00000000
 FLASH_ADDRESS_END = 0x0000FF00
 
 
 def send_read_command(address_begin, address_end, port):
     out_data = []
+    read_data_len = (FLASH_ADDRESS_END - FLASH_ADDRESS_BEGIN) * 2
     command = bytes("$RDR", encoding='utf-8')
     for i in command:
         out_data.append(i)
@@ -25,7 +26,11 @@ def send_read_command(address_begin, address_end, port):
     out_data.append((address_end >> 8) & 0x000000FF)
     out_data.append(address_end & 0x000000FF)
     port.write(out_data)
-    read_data_len = (FLASH_ADDRESS_END - FLASH_ADDRESS_BEGIN) * 2
+    while (1):
+        answer = ser.readline()
+        if (answer == bytes('$OK\r\n', 'UTF-8')):
+            print('Dump in progress. Wait...')
+            break
     return port.read(read_data_len)
 
 # -------------------------Main logic-------------------------

@@ -3,8 +3,7 @@ import time
 
 import serial
 
-WRITEFILE = 'write.bin'  # Filename
-COMPORT = 'COM3'  # Number of comport
+WRITEFILE = 'write_2.bin'  # Filename
 
 SendBlockLength = 2048  # The length of the data packet to write in bytes.
 Com_Baudrate = 1000000  # Port speed in baud.
@@ -62,7 +61,7 @@ def build_send_pack(data: bytes):
     for byteappend in data:
         if (counterbyte == SendBlockLength):
             addressblock = int((SendBlockLength / 2) * counterblock)
-            print(f'Write address {addressblock}  Block number {counterblock}')
+            print(f'Write address {addressblock:012x}  Block {counterblock}')
             ser.write(send_write_block(addressblock, blockarray))
             while (1):
                 answer = ser.readline()
@@ -84,7 +83,7 @@ def build_send_pack(data: bytes):
             blockarray.append(0xff)
             counter_byte += 1
         addressblock = int((SendBlockLength / 2) * counterblock)
-        print(f'Write address {addressblock}  Block number {counterblock}')
+        print(f'Write address {addressblock:012x}  Block {counterblock}')
         ser.write(send_write_block(addressblock, blockarray))
         while (1):
             answer = ser.readline()
@@ -111,7 +110,7 @@ if __name__ == "__main__":
         Flash_File.close()
         print('File is load.')
         try:
-            ser = serial.Serial(COMPORT, Com_Baudrate)
+            ser = serial.Serial('COM3', Com_Baudrate)
         except Exception:
             print('Can\'t open port.')
         else:

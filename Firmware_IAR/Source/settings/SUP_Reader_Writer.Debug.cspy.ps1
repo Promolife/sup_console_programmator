@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "K:\SUP\git\sup_console_programmator\Firmware_IAR\Source\settings\SUP_Reader_Writer.Debug.general.xcl" --backend -f "K:\SUP\git\sup_console_programmator\Firmware_IAR\Source\settings\SUP_Reader_Writer.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\Google Disk\EProjects\SUP_Programm\Firmware_and_console_app\Firmware\settings\SUP_Reader_Writer.Debug.general.xcl" --backend -f "D:\Google Disk\EProjects\SUP_Programm\Firmware_and_console_app\Firmware\settings\SUP_Reader_Writer.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "K:\SUP\git\sup_console_programmator\Firmware_IAR\Source\settings\SUP_Reader_Writer.Debug.general.xcl" --debug_file=$debugfile --backend -f "K:\SUP\git\sup_console_programmator\Firmware_IAR\Source\settings\SUP_Reader_Writer.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\Google Disk\EProjects\SUP_Programm\Firmware_and_console_app\Firmware\settings\SUP_Reader_Writer.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Google Disk\EProjects\SUP_Programm\Firmware_and_console_app\Firmware\settings\SUP_Reader_Writer.Debug.driver.xcl" 
 }

@@ -94,6 +94,7 @@ void K5L_READ_RANGE_FLASH(unsigned long bgn_add,unsigned long end_add)
     data = K5L_READ_WORD(read_counter);
     USART0_Transmit(Lo8(data));
     USART0_Transmit(Hi8(data));
+    delay_us(50);  // Need for hi-speed
   }
   K5L_READ_ADDRESS_STOP();
 }
